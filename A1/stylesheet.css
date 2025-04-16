@@ -1,0 +1,366 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.bg-main {
+    background-color: #f3f4f6; 
+    background-image: url('./buspic.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+}
+
+.bg-cover {
+    background-size: cover;
+}
+
+.bg-center {
+    background-position: center;
+}
+
+.bgd {
+    background-color: #f3f4f6; 
+}
+
+.header {
+    background-color: #2563eb; /* bg-blue-600 */
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.nav {
+    background-color: white;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.nav-link {
+    color: #2563eb; /* text-blue-600 */
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+    color: #1d4ed8; /* hover color */
+    transform: scale(1.05); /* subtle scale effect */
+}
+
+.nav-link.active {
+    font-weight: bold;
+}
+
+.main-text {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.heading {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.subheading {
+    font-weight: bold;
+    color: white;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 1.5rem;
+}
+
+.btn {
+    background-color: #2563eb; /* bg-blue-600 */
+    color: white;
+    padding: 0.75rem 1.5rem;
+    width: 16rem;
+    border-radius: 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #1d4ed8; /* bg-blue-700 */
+    transform: scale(1.05); /* subtle scale effect */
+}
+
+.table-container {
+    max-width: 80%;
+    margin: 2rem auto;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.route-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #d1d5db; /* border-gray-300 */
+}
+
+.table-header {
+    background-color: #2563eb; /* bg-blue-600 */
+    color: white;
+}
+
+.table-cell {
+    border: 1px solid #d1d5db; /* border-gray-300 */
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.row-even {
+    background-color: #f3f4f6; /* bg-gray-100 */
+}
+
+.row-odd {
+    background-color: white;
+}
+
+.footer {
+    text-align: center;
+    color: white; /* text-gray-600 */
+    margin-top: 2.5rem;
+    padding: 1rem;
+    border-top: 1px solid #d1d5db; /* border-gray-300 */
+}
+
+/* Styles for Ticket Availability Page */
+.ticket-table-container {
+    max-width: 90%;
+    margin: 2rem auto;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ticket-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.ticket-table th, .ticket-table td {
+    border: 1px solid #d1d5db;
+    padding: 0.75rem;
+    text-align: center;
+}
+
+.ticket-table thead {
+    background-color: #2563eb;
+    color: white;
+}
+
+.ticket-table tbody tr:nth-child(even) {
+    background-color: #f3f4f6;
+}
+
+.ticket-table tbody tr:nth-child(odd) {
+    background-color: white;
+}
+
+.ticket-heading {
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 1rem;
+}
+.main-title {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1f2937; /* dark gray */
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: #4b5563;
+    margin-top: 0.5rem;
+}
+
+.contact-section {
+    background-color: white;
+    padding: 1.5rem;
+    margin: 1.5rem auto;
+    max-width: 90%;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.section-heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.section-heading.blue {
+    color: #2563eb;
+}
+
+.section-heading.red {
+    color: #dc2626;
+}
+
+.section-heading.green {
+    color: #059669;
+}
+
+.section-desc {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+    color: #374151;
+}
+
+.contact-detail {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    color: #1f2937;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.grid-item {
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+/* General Background */
+body.light-background {
+    background-color: #f3f4f6;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+.header {
+    background-color: #2563eb;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+/* Navbar */
+.navbar {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0.5rem;
+}
+
+.nav-link {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: normal;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+    color: #1d4ed8;
+    transform: scale(1.05);
+}
+
+.nav-link.active {
+    font-weight: bold;
+}
+
+/* Main Container */
+.about-container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Headings */
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1f2937;
+}
+
+.subheading {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.subheading.blue {
+    color: #2563eb;
+}
+
+/* Paragraph & Lists */
+.paragraph {
+    font-size: 1rem;
+    color: #374151;
+    margin-top: 0.5rem;
+    line-height: 1.6;
+}
+
+.list {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
+    color: #374151;
+}
+
+.section {
+    margin-top: 2rem;
+}
+
+/* Join Us */
+.join-section {
+    margin-top: 3rem;
+}
+
+/* Text Alignment */
+.center-text {
+    text-align: center;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    color: white;
+    padding: 1rem;
+    border-top: 1px solid #d1d5db;
+    margin-top: 2rem;
+}

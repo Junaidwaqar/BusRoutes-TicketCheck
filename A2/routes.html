@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Routes - BusRoute & TicketCheck</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    function toggleMenu() {
+      document.getElementById("nav-links").classList.toggle("hidden");
+    }
+  </script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 dark:text-white min-h-screen flex flex-col justify-between">
+
+  <!-- Header -->
+  <header class="bg-blue-600 text-white p-3 text-center text-xl font-bold">
+    BusRoute & TicketCheck
+  </header>
+
+  <!-- Navbar -->
+  <nav class="bg-white dark:bg-gray-800 p-4">
+    <div class="flex justify-between items-center md:justify-center">
+      <div class="md:hidden">
+        <button onclick="toggleMenu()" class="text-blue-600 text-lg font-bold focus:outline-none">☰ Menu</button>
+      </div>
+      <div id="nav-links" class="hidden md:flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 mt-2 md:mt-0">
+        <a href="index.html" class="text-blue-600 hover:underline">Home</a>
+        <a href="routes.html" class="text-blue-600 hover:underline font-bold">Routes</a>
+        <a href="ticketsavailibilty.html" class="text-blue-600 hover:underline">Ticket Availability</a>
+        <a href="contact.html" class="text-blue-600 hover:underline">Contact</a>
+        <a href="about.html" class="text-blue-600 hover:underline">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Title -->
+  <div class="text-center mt-6 px-4">
+    <h1 class="text-2xl sm:text-3xl font-bold text-gray-800 dark:text-white">Available Bus Routes</h1>
+    <p class="text-gray-600 dark:text-gray-300 mt-2">Check the available routes for your journey.</p>
+  </div>
+
+  <!-- Routes Table -->
+  <main class="flex-grow px-4">
+    <div class="overflow-x-auto mt-8 max-w-6xl mx-auto bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+      <table class="min-w-full border-collapse border border-gray-300 dark:border-gray-600 text-sm sm:text-base">
+        <thead>
+          <tr class="bg-blue-600 text-white">
+            <th class="border p-2">Route No</th>
+            <th class="border p-2">From</th>
+            <th class="border p-2">To</th>
+            <th class="border p-2">Stops</th>
+            <th class="border p-2">Bus Number</th>
+            <th class="border p-2">Departure Time</th>
+          </tr>
+        </thead>
+        <tbody class="text-gray-700 dark:text-gray-100 text-center">
+          <tr class="bg-gray-100 dark:bg-gray-700">
+            <td class="border p-2">1</td>
+            <td class="border p-2">Lahore</td>
+            <td class="border p-2">Rawalpindi</td>
+            <td class="border p-2">Gujranwala, Wazirabad, Gujrat, Lala Musa, Gujar Khan</td>
+            <td class="border p-2">LHR-101</td>
+            <td class="border p-2">10:00 AM</td>
+          </tr>
+          <tr class="bg-white dark:bg-gray-800">
+            <td class="border p-2">2</td>
+            <td class="border p-2">Rawalpindi</td>
+            <td class="border p-2">Lahore</td>
+            <td class="border p-2">Gujar Khan, Lala Musa, Gujrat, Wazirabad, Gujranwala</td>
+            <td class="border p-2">RWP-202</td>
+            <td class="border p-2">2:30 PM</td>
+          </tr>
+          <tr class="bg-gray-100 dark:bg-gray-700">
+            <td class="border p-2">3</td>
+            <td class="border p-2">Bahawalpur</td>
+            <td class="border p-2">Lahore</td>
+            <td class="border p-2">Multan, Khanewal, Sahiwal, Okara</td>
+            <td class="border p-2">BWP-303</td>
+            <td class="border p-2">6:45 AM</td>
+          </tr>
+          <tr class="bg-white dark:bg-gray-800">
+            <td class="border p-2">4</td>
+            <td class="border p-2">Lahore</td>
+            <td class="border p-2">Bahawalpur</td>
+            <td class="border p-2">Okara, Sahiwal, Khanewal, Multan</td>
+            <td class="border p-2">LHR-404</td>
+            <td class="border p-2">9:15 PM</td>
+          </tr>
+          <tr class="bg-gray-100 dark:bg-gray-700">
+            <td class="border p-2">5</td>
+            <td class="border p-2">Khanewal</td>
+            <td class="border p-2">Sargodha</td>
+            <td class="border p-2">Toba Tek Singh, Gojra, Faisalabad, Chiniot</td>
+            <td class="border p-2">KNL-505</td>
+            <td class="border p-2">5:00 AM</td>
+          </tr>
+          <tr class="bg-white dark:bg-gray-800">
+            <td class="border p-2">6</td>
+            <td class="border p-2">Sargodha</td>
+            <td class="border p-2">Khanewal</td>
+            <td class="border p-2">Chiniot, Faisalabad, Gojra, Toba Tek Singh</td>
+            <td class="border p-2">SRG-606</td>
+            <td class="border p-2">1:20 PM</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center text-gray-600 dark:text-gray-400 mt-10 p-4 border-t border-gray-300 dark:border-gray-600">
+    &copy; 2025 BusRoute & TicketCheck. All rights reserved.
+  </footer>
+
+</body>
+</html>

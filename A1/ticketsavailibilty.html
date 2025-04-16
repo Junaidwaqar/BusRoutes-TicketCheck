@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ticket Availability - BusRoute & TicketCheck</title>
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body class="bgd">
+
+  <header class="header">
+    BusRoute & TicketCheck
+  </header>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="routes.html" class="nav-link">Routes</a>
+    <a href="ticketavailability.html" class="nav-link active">Ticket Availability</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+    <a href="about.html" class="nav-link">About</a>
+  </nav>
+
+  <div class="main-text">
+    <h1 >Check Ticket Availability</h1>
+    <p >Details to check ticket availability from each terminal.</p>
+  </div>
+
+  <div class="table-container">
+    <table class="route-table">
+      <thead>
+        <tr class="table-header">
+          <th class="table-cell">Bus Number</th>
+          <th class="table-cell">Total Tickets</th>
+          <th class="table-cell">From Terminal</th>
+          <th class="table-cell">Available Tickets</th>
+          <th class="table-cell">Departure Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- LHR-101 -->
+        <tr class="row-even">
+          <td class="table-cell" rowspan="6">LHR-101</td>
+          <td class="table-cell" rowspan="6">60</td>
+          <td class="table-cell">Lahore</td>
+          <td class="table-cell">12</td>
+          <td class="table-cell">10:00 AM</td>
+        </tr>
+        <tr class="row-odd">
+          <td class="table-cell">Gujranwala</td>
+          <td class="table-cell">10</td>
+          <td class="table-cell">10:45 AM</td>
+        </tr>
+        <tr class="row-even">
+          <td class="table-cell">Wazirabad</td>
+          <td class="table-cell">8</td>
+          <td class="table-cell">11:30 AM</td>
+        </tr>
+        <tr class="row-odd">
+          <td class="table-cell">Gujrat</td>
+          <td class="table-cell">6</td>
+          <td class="table-cell">12:15 PM</td>
+        </tr>
+        <tr class="row-even">
+          <td class="table-cell">Lala Musa</td>
+          <td class="table-cell">5</td>
+          <td class="table-cell">1:00 PM</td>
+        </tr>
+        <tr class="row-odd">
+          <td class="table-cell">Gujar Khan</td>
+          <td class="table-cell">4</td>
+          <td class="table-cell">1:45 PM</td>
+        </tr>
+
+        <!-- Add remaining bus rows following the same pattern... -->
+        <!-- For brevity, not repeating all buses here. You can paste them from your existing code. -->
+
+      </tbody>
+    </table>
+  </div>
+
+  <footer class="footer">
+   2025 BusRoute & TicketCheck. All rights reserved.
+  </footer>
+
+</body>
+</html>

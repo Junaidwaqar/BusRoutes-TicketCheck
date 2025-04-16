@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WST-Q6</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("nav-links");
+      menu.classList.toggle("hidden");
+    }
+  </script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 dark:text-white transition-all min-h-screen flex flex-col justify-between">
+
+  <!-- Header -->
+  <header class="bg-blue-600 text-white p-3 text-center text-xl font-bold">
+    BusRoute & TicketCheck
+  </header>
+
+  <!-- Navbar -->
+  <nav class="bg-white p-4">
+    <div class="flex justify-between items-center md:justify-center">
+      <div class="md:hidden">
+        <button onclick="toggleMenu()" class="text-blue-600 focus:outline-none">
+          ☰ Menu
+        </button>
+      </div>
+      <div id="nav-links" class="hidden md:flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 mt-2 md:mt-0">
+        <a href="index.html" class="text-blue-600 hover:underline">Home</a>
+        <a href="routes.html" class="text-blue-600 hover:underline font-bold">Routes</a>
+        <a href="ticketsavailibilty.html" class="text-blue-600 hover:underline">Ticket Availability</a>
+        <a href="contact.html" class="text-blue-600 hover:underline">Contact</a>
+        <a href="about.html" class="text-blue-600 hover:underline">About</a>
+      </div>
+    </div>
+  </nav>
+
+    <div class="text-center mt-6">
+        <h1 class="text-3xl font-bold text-gray-800">Get in Touch</h1>
+        <p class="text-gray-600 mt-2">For queries, complaints, partnerships, and support, contact the relevant department below.</p>
+    </div>
+
+    <div class="max-w-6xl mx-auto mt-8 bg-white p-6 rounded-lg shadow-lg">
+        <!-- Headquarter Contact -->
+        <div class="mb-6">
+            <h2 class="text-2xl font-bold text-blue-600">Headquarters (Lahore)</h2>
+            <p class="text-gray-700 mt-1">For job inquiries, business partnerships, promotions, and general queries.</p>
+            <p class="mt-2"><strong>Email:</strong> hq@busroute.com</p>
+            <p><strong>Helpline 1:</strong> +92 300 1234567</p>
+            <p><strong>Helpline 2:</strong> +92 301 7654321</p>
+        </div>
+
+        <!-- Complaints Section -->
+        <div class="mb-6">
+            <h2 class="text-2xl font-bold text-red-600">Complaints</h2>
+            <p class="text-gray-700 mt-1">For complaints regarding crew misbehavior or service issues.</p>
+            <p class="mt-2"><strong>Email:</strong> complaints@busroute.com</p>
+            <p><strong>Helpline 1:</strong> +92 311 2223344</p>
+            <p><strong>Helpline 2:</strong> +92 322 5566778</p>
+        </div>
+
+        <!-- Stop-wise Contacts -->
+        <div>
+            <h2 class="text-2xl font-bold text-green-600">Stop-wise Contacts</h2>
+            <p class="text-gray-700 mt-1">Contact the nearest terminal for local support.</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
+                <div><h3 class="text-xl font-semibold text-gray-800">Lahore</h3><p><strong>Email:</strong> lahore@busroute.com</p><p><strong>Helpline 1:</strong> +92 321 1112233</p><p><strong>Helpline 2:</strong> +92 321 3334455</p></div>
+                <div><h3 class="text-xl font-semibold text-gray-800">Rawalpindi</h3><p><strong>Email:</strong> rawalpindi@busroute.com</p><p><strong>Helpline 1:</strong> +92 333 4455667</p><p><strong>Helpline 2:</strong> +92 344 7788990</p></div>
+                <div><h3 class="text-xl font-semibold text-gray-800">Gujranwala</h3><p><strong>Email:</strong> gujranwala@busroute.com</p><p><strong>Helpline 1:</strong> +92 355 6677889</p><p><strong>Helpline 2:</strong> +92 366 9988776</p></div>
+                <div><h3 class="text-xl font-semibold text-gray-800">Gujrat</h3><p><strong>Email:</strong> gujrat@busroute.com</p><p><strong>Helpline 1:</strong> +92 377 2233445</p><p><strong>Helpline 2:</strong> +92 388 5566778</p></div>
+                <div><h3 class="text-xl font-semibold text-gray-800">Lala Musa</h3><p><strong>Email:</strong> lalamusa@busroute.com</p><p><strong>Helpline 1:</strong> +92 399 3344556</p><p><strong>Helpline 2:</strong> +92 311 4455667</p></div>
+                <div><h3 class="text-xl font-semibold text-gray-800">Multan</h3><p><strong>Email:</strong> multan@busroute.com</p><p><strong>Helpline 1:</strong> +92 322 5566778</p><p><strong>Helpline 2:</strong> +92 333 6677889</p></div>
+                <div><h3 class="text-xl font-semibold text-gray-800">Khanewal</h3><p><strong>Email:</strong> khanewal@busroute.com</p><p><strong>Helpline 1:</strong> +92 344 7788990</p><p><strong>Helpline 2:</strong> +92 355 8899001</p></div>
+                <div><h3 class="text-xl font-semibold text-gray-800">Sahiwal</h3><p><strong>Email:</strong> sahiwal@busroute.com</p><p><strong>Helpline 1:</strong> +92 366 9988776</p><p><strong>Helpline 2:</strong> +92 377 1122334</p></div>
+                <div><h3 class="text-xl font-semibold text-gray-800">Okara</h3><p><strong>Email:</strong> okara@busroute.com</p><p><strong>Helpline 1:</strong> +92 388 5566778</p><p><strong>Helpline 2:</strong> +92 399 2233445</p></div>
+                <div><h3 class="text-xl font-semibold text-gray-800">Sargodha</h3><p><strong>Email:</strong> sargodha@busroute.com</p><p><strong>Helpline 1:</strong> +92 399 6677889</p><p><strong>Helpline 2:</strong> +92 311 7788990</p></div>
+                <div><h3 class="text-xl font-semibold text-gray-800">Toba Tek Singh</h3><p><strong>Email:</strong> tts@busroute.com</p><p><strong>Helpline 1:</strong> +92 322 4455667</p><p><strong>Helpline 2:</strong> +92 333 5566778</p></div>
+                <div><h3 class="text-xl font-semibold text-gray-800">Gojra</h3><p><strong>Email:</strong> gojra@busroute.com</p><p><strong>Helpline 1:</strong> +92 344 6677889</p><p><strong>Helpline 2:</strong> +92 355 7788990</p></div>
+                <div><h3 class="text-xl font-semibold text-gray-800">Chiniot</h3><p><strong>Email:</strong> chiniot@busroute.com</p><p><strong>Helpline 1:</strong> +92 366 8899001</p><p><strong>Helpline 2:</strong> +92 377 9900112</p></div>
+                <div><h3 class="text-xl font-semibold text-gray-800">Gujar Khan</h3><p><strong>Email:</strong> gujarkhan@busroute.com</p><p><strong>Helpline 1:</strong> +92 388 1122334</p><p><strong>Helpline 2:</strong> +92 399 2233445</p></div>
+                <div><h3 class="text-xl font-semibold text-gray-800">Wazirabad</h3><p><strong>Email:</strong> wazirabad@busroute.com</p><p><strong>Helpline 1:</strong> +92 311 3344556</p><p><strong>Helpline 2:</strong> +92 322 4455667</p></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

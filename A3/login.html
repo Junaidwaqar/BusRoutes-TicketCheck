@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - BusRoute & TicketCheck</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 h-screen flex flex-col">
+    <nav id="mainMenu" class="bg-blue-500 text-white p-4 flex justify-between items-center">
+        <span class="text-lg font-semibold">BusRoute & TicketCheck</span>
+        <div class="hidden md:flex space-x-4">
+            <a href="index.html" class="hover:text-gray-200">Home</a>
+            <a href="routes.html" class="hover:text-gray-200">Routes</a>
+            <a href="ticketsavailibilty.html" class="hover:text-gray-200">Ticket Availability</a>
+            <a href="contact.html" class="hover:text-gray-200">Contact</a>
+            <a href="about.html" class="hover:text-gray-200">About</a>
+        </div>
+        <button onclick="toggleMenu()" class="md:hidden">&#9776;</button>
+    </nav>
+
+    <main class="container mx-auto p-8 flex-grow flex flex-col justify-center items-center">
+        <h2 class="text-2xl font-bold mb-4">Login</h2>
+        <form id="loginForm" onsubmit="return validateLoginForm()" class="w-full max-w-md">
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email:</label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" name="email" type="email">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="username">Username:</label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" name="username" type="text">
+            </div>
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="password">Password:</label>
+                <div class="flex items-center">
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="password" name="password" type="password" required>
+                    <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded ml-2" type="button" onclick="togglePassword('password')">Show/Hide</button>
+                </div>
+            </div>
+            <div class="flex items-center justify-between">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                    Submit
+                </button>
+            </div>
+        </form>
+        <p class="text-center text-gray-500 text-xs mt-4">
+            Don't have an account? <a href="registration.html" class="text-blue-500 hover:text-blue-700">Register Now</a>
+        </p>
+    </main>
+
+    <footer class="bg-gray-200 text-center p-4">
+        <button onclick="scrollToTop()" class="bg-gray-400 hover:bg-gray-500 text-white py-1 px-3 rounded">Back to Top</button>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

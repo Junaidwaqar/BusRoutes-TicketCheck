@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - BusRoute & TicketCheck</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 h-screen flex flex-col">
+    <nav id="mainMenu" class="bg-blue-500 text-white p-4 flex justify-between items-center">
+        <span class="text-lg font-semibold">BusRoute & TicketCheck</span>
+        <div class="hidden md:flex space-x-4">
+            <a href="index.html" class="hover:text-gray-200">Home</a>
+            <a href="routes.html" class="hover:text-gray-200">Routes</a>
+            <a href="ticketsavailibilty.html" class="hover:text-gray-200">Ticket Availability</a>
+            <a href="contact.html" class="hover:text-gray-200">Contact</a>
+            <a href="about.html" class="hover:text-gray-200">About</a>
+        </div>
+        <button onclick="toggleMenu()" class="md:hidden">&#9776;</button>
+    </nav>
+
+    <main class="container mx-auto p-8 flex-grow flex flex-col items-center">
+        <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
+        <div class="mb-4">
+            <label for="citySelect" class="block text-gray-700 text-sm font-bold mb-2">Select City:</label>
+            <select id="citySelect" onchange="showContact(this.value)" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                <option value="lahore">Lahore</option>
+                <option value="rawalpindi">Rawalpindi</option>
+                <option value="gujranwala">Gujranwala</option>
+                <option value="gujrat">Gujrat</option>
+                <option value="lalamusa">Lala Musa</option>
+                <option value="multan">Multan</option>
+                <option value="khanewal">Khanewal</option>
+                <option value="sahiwal">Sahiwal</option>
+                <option value="okara">Okara</option>
+                <option value="sargodha">Sargodha</option>
+                <option value="tts">Toba Tek Singh</option>
+                <option value="gojra">Gojra</option>
+                <option value="chiniot">Chiniot</option>
+                <option value="gujarkhan">Gujar Khan</option>
+                <option value="wazirabad">Wazirabad</option>
+            </select>
+        </div>
+
+        <div class="contact-info" id="lahore-contact" style="display:block">
+            <strong class="block font-bold text-gray-700">Lahore Terminal</strong>
+            <p class="text-gray-600">Email: lahore@busroute.com</p>
+            <p class="text-gray-600">Helpline 1: +92 321 1112233</p>
+            <p class="text-gray-600">Helpline 2: +92 321 3334455</p>
+        </div>
+
+        <div class="contact-info" id="rawalpindi-contact" style="display:none">
+            <strong class="block font-bold text-gray-700">Rawalpindi Terminal</strong>
+            <p class="text-gray-600">Email: rawalpindi@busroute.com</p>
+            <p class="text-gray-600">Helpline 1: +92 333 4455667</p>
+            <p class="text-gray-600">Helpline 2: +92 344 7788990</p>
+        </div>
+
+        <div class="contact-info" id="gujranwala-contact" style="display:none">
+            <strong class="block font-bold text-gray-700">Gujranwala Terminal</strong>
+            <p class="text-gray-600">Email: gujranwala@busroute.com</p>
+            <p class="text-gray-600">Helpline 1: +92 355 6677889</p>
+            <p class="text-gray-600">Helpline 2: +92 366 9988776</p>
+        </div>
+
+        <div class="contact-info" id="gujrat-contact" style="display:none">
+            <strong class="block font-bold text-gray-700">Gujrat Terminal</strong>
+            <p class="text-gray-600">Email: gujrat@busroute.com</p>
+            <p class="text-gray-600">Helpline 1: +92 377 2233445</p>
+            <p class="text-gray-600">Helpline 2: +92 388 5566778</p>
+        </div>
+
+        <div class="contact-info" id="lalamusa-contact" style="display:none">
+            <strong class="block font-bold text-gray-700">Lala Musa Terminal</strong>
+            <p class="text-gray-600">Email: lalamusa@busroute.com</p>
+            <p class="text-gray-600">Helpline 1: +92 399 3344556</p>
+            <p class="text-gray-600">Helpline 2: +92 311 4455667</p>
+        </div>
+
+        <div class="contact-info" id="multan-contact" style="display:none">
+            <strong class="block font-bold text-gray-700">Multan Terminal</strong>
+            <p class="text-gray-600">Email: multan@busroute.com</p>
+            <p class="text-gray-600">Helpline 1: +92 322 5566778</p>
+            <p class="text-gray-600">Helpline 2: +92 333 6677889</p>
+        </div>
+
+        <div class="contact-info" id="khanewal-contact" style="display:none">
+            <strong class="block font-bold text-gray-700">Khanewal Terminal</strong>
+            <p class="text-gray-600">Email: khanewal@busroute.com</p>
+            <p class="text-gray-600">Helpline 1: +92 344 7788990</p>
+            <p class="text-gray-600">Helpline 2: +92 355 8899001</p>
+        </div>
+
+        <div class="contact-info" id="sahiwal-contact" style="display:none">
+            <strong class="block font-bold text-gray-700">Sahiwal Terminal</strong>
+            <p class="text-gray-600">Email: sahiwal@busroute.com</p>
+            <p class="text-gray-600">Helpline 1: +92 366 9988776</p>
+            <p class="text-gray-600">Helpline 2: +92 377 1122334</p>
+        </div>
+
+        <div class="contact-info" id="okara-contact" style="display:none">
+            <strong class="block font-bold text-gray-700">Okara Terminal</strong>
+            <p class="text-gray-600">Email: okara@busroute.com</p>
+            <p class="text-gray-600">Helpline 1: +92 388 5566778</p>
+            <p class="text-gray-600">Helpline 2: +92 399 2233445</p>
+        </div>
+
+        <div class="contact-info" id="sargodha-contact" style="display:none">
+            <strong class="block font-bold text-gray-700">Sargodha Terminal</strong>
+            <p class="text-gray-600">Email: sargodha@busroute.com</p>
+            <p class="text-gray-600">Helpline 1: +92 399 6677889</p>
+            <p class="text-gray-600">Helpline 2: +92 311 7788990</p>
+        </div>
+
+        <div class="contact-info" id="tts-contact" style="display:none">
+            <strong class="block font-bold text-gray-700">Toba Tek Singh Terminal</strong>
+            <p class="text-gray-600">Email: tts@busroute.com</p>
+            <p class="text-gray-600">Helpline 1: +92 322 4455667</p>
+            <p class="text-gray-600">Helpline 2: +92 333 5566778</p>
+        </div>
+
+        <div class="contact-info" id="gojra-contact" style="display:none">
+            <strong class="block font-bold text-gray-700">Gojra Terminal</strong>
+            <p class="text-gray-600">Email: gojra@busroute.com</p>
+            <p class="text-gray-600">Helpline 1: +92 344 6677889</p>
+            <p class="text-gray-600">Helpline 2: +92 355 7788990</p>
+        </div>
+
+        <div class="contact-info" id="chiniot-contact" style="display:none">
+            <strong class="block font-bold text-gray-700">Chiniot Terminal</strong>
+            <p class="text-gray-600">Email: chiniot@busroute.com</p>
+            <p class="text-gray-600">Helpline 1: +92 366 8899001</p>
+            <p class="text-gray-600">Helpline 2: +92 377 9900112</p>
+        </div>
+
+        <div class="contact-info" id="gujarkhan-contact" style="display:none">
+            <strong class="block font-bold text-gray-700">Gujar Khan Terminal</strong>
+            <p class="text-gray-600">Email: gujarkhan@busroute.com</p>
+            <p class="text-gray-600">Helpline 1: +92 388 1122334</p>
+            <p class="text-gray-600">Helpline 2: +92 399 2233445</p>
+        </div>
+
+        <div class="contact-info" id="wazirabad-contact" style="display:none">
+            <strong class="block font-bold text-gray-700">Wazirabad Terminal</strong>
+            <p class="text-gray-600">Email: wazirabad@busroute.com</p>
+            <p class="text-gray-600">Helpline 1: +92 311 3344556</p>
+            <p class="text-gray-600">Helpline 2: +92 322 4455667</p>
+        </div>
+    </main>
+
+    <footer class="bg-gray-200 text-center p-4">
+        <button onclick="scrollToTop()" class="bg-gray-400 hover:bg-gray-500 text-white py-1 px-3 rounded">Back to Top</button>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

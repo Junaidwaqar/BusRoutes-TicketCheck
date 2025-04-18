@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - BusRoute & TicketCheck</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body onload="displayCurrentDate()" class="bg-gray-100  bg-[url('buspic.jpg')] bg-cover bg-center min-h-screen flex flex-col justify-between">
+    <nav id="mainMenu" class="bg-blue-500 text-white p-4 flex justify-between items-center">
+        <span class="text-lg font-semibold">BusRoute & TicketCheck</span>
+        <div class="hidden md:flex space-x-4">
+            <a href="index.html" class="hover:text-gray-200">Home</a>
+            <a href="routes.html" class="hover:text-gray-200">Routes</a>
+            <a href="ticketsavailibilty.html" class="hover:text-gray-200">Ticket Availability</a>
+            <a href="contact.html" class="hover:text-gray-200">Contact</a>
+            <a href="about.html" class="hover:text-gray-200">About</a>
+        </div>
+        <button onclick="toggleMenu()" class="md:hidden">&#9776;</button>
+    </nav>
+
+    <main class="container mx-auto p-8 flex-grow flex flex-col justify-center items-center">
+        <h1 class="text-3xl font-bold mb-4">Find Your Bus Route & Check Ticket Availability</h1>
+        <p class="text-gray-700 mb-8">Plan your journey with ease and convenience.</p>
+        <div class="text-center mb-4">
+            <span id="currentDate" class="text-gray-600"></span>
+        </div>
+        <div class="space-y-2">
+            <a href="routes.html" class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 block">Search Bus Routes</a>
+            <a href="ticketsavailibilty.html" class="bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700 block">Check Ticket Availability</a>
+            <a href="Login.html" class="bg-yellow-600 text-white py-2 px-4 rounded hover:bg-yellow-700 block">Login</a>
+            <a href="registration.html" class="bg-purple-600 text-white py-2 px-4 rounded hover:bg-purple-700 block">Register</a>
+        </div>
+    </main>
+
+    <footer class="bg-gray-200 text-center p-4">
+        <button onclick="scrollToTop()" class="bg-gray-400 hover:bg-gray-500 text-white py-1 px-3 rounded">Back to Top</button>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

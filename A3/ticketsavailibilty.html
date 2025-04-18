@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Availability - BusRoute & TicketCheck</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 h-screen flex flex-col">
+    <nav id="mainMenu" class="bg-blue-500 text-white p-4 flex justify-between items-center">
+        <span class="text-lg font-semibold">BusRoute & TicketCheck</span>
+        <div class="hidden md:flex space-x-4">
+            <a href="index.html" class="hover:text-gray-200">Home</a>
+            <a href="routes.html" class="hover:text-gray-200">Routes</a>
+            <a href="ticketsavailibilty.html" class="hover:text-gray-200">Ticket Availability</a>
+            <a href="contact.html" class="hover:text-gray-200">Contact</a>
+            <a href="about.html" class="hover:text-gray-200">About</a>
+        </div>
+        <button onclick="toggleMenu()" class="md:hidden">&#9776;</button>
+    </nav>
+
+    <main class="container mx-auto p-8 flex-grow flex flex-col items-center">
+        <h2 class="text-2xl font-bold mb-4">Check Ticket Availability</h2>
+        <div class="mb-4">
+            <label for="busSelect" class="block text-gray-700 text-sm font-bold mb-2">Select Bus Number:</label>
+            <select id="busSelect" onchange="checkTicketAvailability(this.value)" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                <option value="">--Select--</option>
+                <option value="LHR-101">LHR-101</option>
+                <option value="RWP-202">RWP-202</option>
+                <option value="BWP-303">BWP-303</option>
+                <option value="LHR-404">LHR-404</option>
+                <option value="KNL-505">KNL-505</option>
+                <option value="SRG-606">SRG-606</option>
+            </select>
+        </div>
+        <table id="ticketTable" class="table-auto border-collapse border border-gray-500 w-full max-w-lg">
+            <thead>
+                <tr class="bg-gray-200">
+                    <th class="border border-gray-500 px-4 py-2">Bus Number</th>
+                    <th class="border border-gray-500 px-4 py-2">Total Tickets</th>
+                    <th class="border border-gray-500 px-4 py-2">From Terminal</th>
+                    <th class="border border-gray-500 px-4 py-2">Available Tickets</th>
+                    <th class="border border-gray-500 px-4 py-2">Departure Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td class="border border-gray-500 px-4 py-2">LHR-101</td><td class="border border-gray-500 px-4 py-2">60</td><td class="border border-gray-500 px-4 py-2">Lahore</td><td class="border border-gray-500 px-4 py-2">12</td><td class="border border-gray-500 px-4 py-2">10:00 AM</td></tr>
+                <tr><td class="border border-gray-500 px-4 py-2">LHR-101</td><td class="border border-gray-500 px-4 py-2"></td><td class="border border-gray-500 px-4 py-2">Gujranwala</td><td class="border border-gray-500 px-4 py-2">10</td><td class="border border-gray-500 px-4 py-2">10:45 AM</td></tr>
+                <tr><td class="border border-gray-500 px-4 py-2">LHR-101</td><td class="border border-gray-500 px-4 py-2"></td><td class="border border-gray-500 px-4 py-2">Wazirabad</td><td class="border border-gray-500 px-4 py-2">8</td><td class="border border-gray-500 px-4 py-2">11:30 AM</td></tr>
+                <tr><td class="border border-gray-500 px-4 py-2">LHR-101</td><td class="border border-gray-500 px-4 py-2"></td><td class="border border-gray-500 px-4 py-2">Gujrat</td><td class="border border-gray-500 px-4 py-2">6</td><td class="border border-gray-500 px-4 py-2">12:15 PM</td></tr>
+                <tr><td class="border border-gray-500 px-4 py-2">LHR-101</td><td class="border border-gray-500 px-4 py-2"></td><td class="border border-gray-500 px-4 py-2">Lala Musa</td><td class="border border-gray-500 px-4 py-2">5</td><td class="border border-gray-500 px-4 py-2">1:00 PM</td></tr>
+                <tr><td class="border border-gray-500 px-4 py-2">LHR-101</td><td class="border border-gray-500 px-4 py-2"></td><td class="border border-gray-500 px-4 py-2">Gujar Khan</td><td class="border border-gray-500 px-4 py-2">4</td><td class="border border-gray-500 px-4 py-2">1:45 PM</td></tr>
+                <tr><td class="border border-gray-500 px-4 py-2">RWP-202</td><td class="border border-gray-500 px-4 py-2">60</td><td class="border border-gray-500 px-4 py-2">Rawalpindi</td><td class="border border-gray-500 px-4 py-2">42</td><td class="border border-gray-500 px-4 py-2">2:30 PM</td></tr>
+                <tr><td class="border border-gray-500 px-4 py-2">RWP-202</td><td class="border border-gray-500 px-4 py-2"></td><td class="border border-gray-500 px-4 py-2">Gujar Khan</td><td class="border border-gray-500 px-4 py-2">14</td><td class="border border-gray-500 px-4 py-2">3:15 PM</td></tr>
+                <tr><td class="border border-gray-500 px-4 py-2">RWP-202</td><td class="border border-gray-500 px-4 py-2"></td><td class="border border-gray-500 px-4 py-2">Lala Musa</td><td class="border border-gray-500 px-4 py-2">12</td><td class="border border-gray-500 px-4 py-2">4:00 PM</td></tr>
+                <tr><td class="border border-gray-500 px-4 py-2">RWP-202</td><td class="border border-gray-500 px-4 py-2"></td><td class="border border-gray-500 px-4 py-2">Gujrat</td><td class="border border-gray-500 px-4 py-2">10</td><td class="border border-gray-500 px-4 py-2">4:45 PM</td></tr>
+                <tr><td class="border border-gray-500 px-4 py-2">RWP-202</td><td class="border border-gray-500 px-4 py-2"></td><td class="border border-gray-500 px-4 py-2">Wazirabad</td><td class="border border-gray-500 px-4 py-2">6</td><td class="border border-gray-500 px-4 py-2">5:30 PM</td></tr>
+                <tr><td class="border border-gray-500 px-4 py-2">RWP-202</td><td class="border border-gray-500 px-4 py-2"></td><td class="border border-gray-500 px-4 py-2">Gujranwala</td><td class="border border-gray-500 px-4 py-2">5</td><td class="border border-gray-500 px-4 py-2">6:15 PM</td></tr>
+                <tr><td class="border border-gray-500 px-4 py-2">BWP-303</td><td class="border border-gray-500 px-4 py-2">45</td><td class="border border-gray-500 px-4 py-2">Bahawalpur</td><td class="border border-gray-500 px-4 py-2">38</td><td class="border border-gray-500 px-4 py-2">06:45 AM</td></tr>
+                <tr><td class="border border-gray-500 px-4 py-2">BWP-303</td><td class="border border-gray-500 px-4 py-2"></td><td class="border border-gray-500 px-4 py-2">Multan</td><td class="border border-gray-500 px-4 py-2">20</td><td class="border border-gray-500 px-4 py-2">07:45 AM</td></tr>
+                <tr><td class="border border-gray-500 px-4 py-2">BWP-303</td><td class="border border-gray-500 px-4 py-2"></td><td class="border border-gray-500 px-4 py-2">Khanewal</td><td class="border border-gray-500 px-4 py-2">12</td><td class="border border-gray-500 px-4 py-2">06:15 PM</td></tr>
+                <tr><td class="border border-gray-500 px-4 py-2">BWP-303</td><td class="border border-gray-500 px-4 py-2"></td><td class="border border-gray-500 px-4 py-2">Sahiwal</td><td class="border border-gray-500 px-4 py-2">9</td><td class="border border-gray-500 px-4 py-2">09:30 AM</td></tr>
+                <tr><td class="border border-gray-500 px-4 py-2">BWP-303</td><td class="border border-gray-500 px-4 py-2"></td><td class="border border-gray-500 px-4 py-2">Okara</td><td class="border border-gray-500 px-4 py-2">5</td><td class="border border-gray-500 px-4 py-2">12:00 PM</td></tr>
+                <tr><td class="border border-gray-500 px-4 py-2">LHR-404</td><td class="border border-gray-500 px-4 py-2">50</td><td class="border border-gray-500 px-4 py-2">Lahore</td><td class="border border-gray-500 px-4 py-2">42</td><td class="border border-gray-500 px-4 py-2">09:15 PM</td></tr>
+                <tr><td class="border border-gray-500 px-4 py-2">LHR-404</td><td class="border border-gray-500 px-4 py-2"></td><td class="border border-gray-500 px-4 py-2">Okara</td><td class="border border-gray-500 px-4 py-2">35</td><td class="border border-gray-500 px-4 py-2">10:00 PM</td></tr>
+                <tr><td class="border border-gray-500 px-4 py-2">LHR-404</td><td class="border border-gray-500 px-4 py-2"></td><td class="border border-gray-500 px-4 py-2">Sahiwal</td><td class="border border-gray-500 px-4 py-2">30</td><td class="border border-gray-500 px-4 py-2">10:45 PM</td></tr>
+                <tr><td class="border border-gray-500 px-4 py-2">LHR-404</td><td class="border border-gray-500 px-4 py-2"></td><td class="border border-gray-500 px-4 py-2">Khanewal</td><td class="border border-gray-500 px-4 py-2">18</td><td class="border border-gray-500 px-4 py-2">11:30 PM</td></tr>
+                <tr><td class="border border-gray-500 px-4 py-2">LHR-404</td><td class="border border-gray-500 px-4 py-2"></td><td class="border border-gray-500 px-4 py-2">Multan</td><td class="border border-gray-500 px-4 py-2">6</td><td class="border border-gray-500 px-4 py-2">12:15 AM</td></tr>
+                <tr><td class="border border-gray-500 px-4 py-2">KNL-505</td><td class="border border-gray-500 px-4 py-2">60</td><td class="border border-gray-500 px-4 py-2">Khanewal</td><td class="border border-gray-500 px-4 py-2">52</td><td class="border border-gray-500 px-4 py-2">05:00 AM</td></tr>
+                <tr><td class="border border-gray-500 px-4 py-2">KNL-505</td><td class="border border-gray-500 px-4 py-2"></td><td class="border border-gray-500 px-4 py-2">Toba Tek Singh</td><td class="border border-gray-500 px-4 py-2">30</td><td class="border border-gray-500 px-4 py-2">06:45 AM</td></tr>
+                <tr><td class="border border-gray-500 px-4 py-2">KNL-505</td><td class="border border-gray-500 px-4 py-2"></td><td class="border border-gray-500 px-4 py-2">Gojra</td><td class="border border-gray-500 px-4 py-2">21</td><td class="border border-gray-500 px-4 py-2">08:30 AM</td></tr>
+                <tr><td class="border border-gray-500 px-4 py-2">KNL-505</td><td class="border border-gray-500 px-4 py-2"></td><td class="border border-gray-500 px-4 py-2">Faisalabad</td><td class="border border-gray-500 px-4 py-2">16</td><td class="border border-gray-500 px-4 py-2">10:15 AM</td></tr>
+                <tr><td class="border border-gray-500 px-4 py-2">KNL-505</td><td class="border border-gray-500 px-4 py-2"></td><td class="border border-gray-500 px-4 py-2">Chiniot</td><td class="border border-gray-500 px-4 py-2">5</td><td class="border border-gray-500 px-4 py-2">12:15 PM</td></tr>
+                <tr><td class="border border-gray-500 px-4 py-2">SRG-606</td><td class="border border-gray-500 px-4 py-2">60</td><td class="border border-gray-500 px-4 py-2">Sargodha</td><td class="border border-gray-500 px-4 py-2">42</td><td class="border border-gray-500 px-4 py-2">01:30 PM</td></tr>
+                <tr><td class="border border-gray-500 px-4 py-2">SRG-606</td><td class="border border-gray-500 px-4 py-2"></td><td class="border border-gray-500 px-4 py-2">Chiniot</td><td class="border border-gray-500 px-4 py-2">30</td><td class="border border-gray-500 px-4 py-2">02:45 PM</td></tr>
+                <tr><td class="border border-gray-500 px-4 py-2">SRG-606</td><td class="border border-gray-500 px-4 py-2"></td><td class="border border-gray-500 px-4 py-2">Faisalabad</td><td class="border border-gray-500 px-4 py-2">18</td><td class="border border-gray-500 px-4 py-2">03:30 PM</td></tr>
+                <tr><td class="border border-gray-500 px-4 py-2">SRG-606</td><td class="border border-gray-500 px-4 py-2"></td><td class="border border-gray-500 px-4 py-2">Gojra</td><td class="border border-gray-500 px-4 py-2">6</td><td class="border border-gray-500 px-4 py-2">04:15 PM</td></tr>
+                <tr><td class="border border-gray-500 px-4 py-2">SRG-606</td><td class="border border-gray-500 px-4 py-2"></td><td class="border border-gray-500 px-4 py-2">Toba Tek Singh</td><td class="border border-gray-500 px-4 py-2">4</td><td class="border border-gray-500 px-4 py-2">06:00 PM</td></tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer class="bg-gray-200 text-center p-4">
+        <button onclick="scrollToTop()" class="bg-gray-400 hover:bg-gray-500 text-white py-1 px-3 rounded">Back to Top</button>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
